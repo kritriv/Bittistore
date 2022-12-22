@@ -1,50 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+class MyHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div id="__next" data-reactroot="">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Buttistore makes a masterpiece artwork of your photo, frames and delivers to your doorstep">
-    <meta name="next-head-count" content="7" />
-    <title>Get your favourite photos painted.</title>
-
-    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0113/4489.js" async=""></script>
-
-    <link rel="preload" href="/_next/static/css/9b02004918e3f225.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/9b02004918e3f225.css" data-n-g="" /><noscript
-        data-n-css=""></noscript>
-    <script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script>
-    <script defer="" src="/_next/static/chunks/3248.76d41c3b0b2af8ef.js"></script>
-    <script defer="" src="/_next/static/chunks/6111.0e7d97c50782b27b.js"></script>
-    <script defer="" src="/_next/static/chunks/7098-2194999408ef7c73.js"></script>
-    <script defer="" src="/_next/static/chunks/5710.affd9ea4c4576ee8.js"></script>
-    <script defer="" src="/_next/static/chunks/6529.e1307064438b3eb3.js"></script>
-    <script defer="" src="/_next/static/chunks/1876-4fbe28c59c98d402.js"></script>
-    <script defer="" src="/_next/static/chunks/9011.395bbd2dd5d29f8c.js"></script>
-    <script defer="" src="/_next/static/chunks/6514.eb7cfa20f8ed9b68.js"></script>
-
-    <script src="/_next/static/javascript/webpack-20a0cce90ad650ea.js" defer=""></script>
-    <script src="/_next/static/javascript/framework-a070cbfff3c750c5.js" defer=""></script>
-    <script src="/_next/static/javascript/main-02ad56f2576ab266.js" defer=""></script>
-    <script src="/_next/static/javascript/_app-531616df2c600f4e.js" defer=""></script>
-    <script src="/_next/static/javascript/1829-e7bae4b6ad3ca86d.js" defer=""></script>
-    <script src="/_next/static/javascript/1664-ab0c95d8d8af460c.js" defer=""></script>
-    <script src="/_next/static/javascript/5675-36f7e75508dfac0d.js" defer=""></script>
-    <script src="/_next/static/javascript/7937-448ec58652524db1.js" defer=""></script>
-    <script src="/_next/static/javascript/2820-72a01bfd067e2b9f.js" defer=""></script>
-    <script src="/_next/static/javascript/index-774509fb194680a1.js" defer=""></script>
-
-    <script src="/_next/static/exrq7-hAmdb0mMUwfirJv/_buildManifest.js" defer=""></script>
-    <script src="/_next/static/exrq7-hAmdb0mMUwfirJv/_ssgManifest.js" defer=""></script>
-    <script src="/_next/static/exrq7-hAmdb0mMUwfirJv/_middlewareManifest.js" defer=""></script>
-
-</head>
-
-
-<body>
-    <div id="__next" data-reactroot="">
         <div class="fixed top-0 z-50 block w-full py-3 md:hidden bg-primary">
             <div class="w-11/12 mx-auto">
                 <div class="flex items-center justify-between">
@@ -83,7 +41,6 @@
                 </div>
             </div>
         </div>
-
         <div class="sticky top-0 z-50 hidden py-6 md:block bg-primary">
             <div class="w-11/12 mx-auto">
                 <div class="flex items-center justify-between"><a href="/"><svg width="1em" height="1em" fill="none"
@@ -102,29 +59,31 @@
                     <div class="">
                         <ul class="hidden space-x-8 md:flex"><a
                                 class="px-4 py-1 -mt-1 font-bold text-center text-white rounded-lg bg-accent pera-7"
-                                href="/shop">Shop</a>
+                                href="/shop.html">Shop</a>
                             <li class="text-white cursor-pointer pera-6"><span>Personalized Gifts</span></li>
                             <li class="text-white cursor-pointer pera-6"><span>Specials</span></li><a
-                                href="bulk.html">
+                                href="/bulk.html">
                                 <li class="text-white cursor-pointer pera-6">Bulk Order</li>
-                            </a><a href="blog.html">
+                            </a>
+                            <a href="/blog.html">
                                 <li class="text-white cursor-pointer pera-6">Blog</li>
                             </a>
                         </ul>
                     </div>
-                    <div class="flex items-center space-x-3"><a href="/login"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="21" height="24" fill="none" viewBox="0 0 21 24">
+                    <div class="flex items-center space-x-3"><a href="/login.html"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="21" height="24" fill="none"
+                                viewBox="0 0 21 24">
                                 <path stroke="#fff" stroke-linecap="round" stroke-width="2.692"
                                     d="M10.75 10.75a4.375 4.375 0 110-8.75 4.375 4.375 0 010 8.75zM2 22.417v-1.459a5.833 5.833 0 015.833-5.833h5.834a5.834 5.834 0 015.833 5.833v1.459">
                                 </path>
-                            </svg></a><a href="/wishlist">
+                            </svg></a><a href="/login.html">
                             <div class="relative "><svg xmlns="http://www.w3.org/2000/svg" width="27" height="25"
                                     fill="none" viewBox="0 0 27 25">
                                     <path fill="#fff"
                                         d="M13.463 2.097a7.947 7.947 0 00-8.45-1.48c-.974.406-1.857 1-2.6 1.75-3.168 3.18-3.166 8.156.003 11.323l9.87 9.87c.228.403.67.663 1.177.663a1.333 1.333 0 001.067-.55l9.981-9.983c3.17-3.168 3.17-8.143-.002-11.329A7.993 7.993 0 0018.843 0a7.95 7.95 0 00-5.38 2.097zm9.142 2.168c2.104 2.114 2.106 5.418.003 7.522l-9.145 9.144-9.144-9.144C2.216 9.683 2.218 6.379 4.316 4.27 5.34 3.252 6.677 2.692 8.084 2.692c1.407 0 2.74.56 3.755 1.575l.673.673a1.345 1.345 0 001.903 0l.673-.673c2.036-2.031 5.485-2.026 7.517-.002z">
                                     </path>
                                 </svg></div>
-                        </a><a href="/cart">
+                        </a><a href="/cart.html">
                             <div class="relative "><svg xmlns="http://www.w3.org/2000/svg" width="28" height="31"
                                     fill="none" viewBox="0 0 28 31">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
@@ -139,53 +98,16 @@
                 </div>
             </div>
         </div>
+    </div>
+        `
+    }
+}
 
+customElements.define('my-header', MyHeader)
 
-
-
-
-        <div>
-            <div class="py-32 md:py-0">
-                <form class="flex items-center justify-center px-6 py-6 font-montserrat">
-                    <div class="mx-auto bg-white rounded-md shadow-none md:shadow-2xl ">
-                        <div class="rounded-t-md"><span
-                                style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span
-                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img
-                                        style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
-                                        alt="" aria-hidden="true"
-                                        src="images/login_img.png" /></span><img
-                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                    decoding="async" data-nimg="intrinsic"
-                                    style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%" /><noscript><img
-                                        srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Feasy-cod.6ea45f01.png&amp;w=640&amp;q=100 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Feasy-cod.6ea45f01.png&amp;w=1200&amp;q=100 2x"
-                                        src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Feasy-cod.6ea45f01.png&amp;w=1200&amp;q=100"
-                                        decoding="async" data-nimg="intrinsic"
-                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-                                        loading="lazy" /></noscript></span></div>
-                        <div class="px-6">
-                            <div class="flex pb-3 mt-8 place-content-center sm:place-content-start">
-                                <div class="font-bold text-center sm:text-verysm text-gray">Login or Signup</div><span
-                                    class="hidden text-sm pl-28 text-accent sm:block"> </span>
-                            </div>
-                            <div class="mb-2 text-xs sm:hidden text-accent"> </div>
-                            <div class="border-black border-solid rounded outline outline-offset-2 outline-1"><input
-                                    type="tel" required="" name="phone" placeholder="Mobile number"
-                                    class="w-full text-gray font-semibold outline-none text-sm px-1.5 py-3 " /></div>
-                        </div>
-                        <div class="flex justify-center px-6 py-2 font-bold text-red-500"></div>
-                        <div class="py-8 pb-8 text-center"><button type="submit"
-                                class="px-20 md:px-32 py-2 mx-2 font-bold text-white rounded bg-accent"><span>CONTINUE</span></button>
-                        </div>
-                        <div class="flex pt-32 md:py-6 md:pt-0 text-xxs place-content-center">
-                            <p class="px-8 md:w-full pt-2.5 text-gray text-center">By continuing, I agree to the<!-- -->
-                                <a class="text-accent" href="terms-and-conditions">Terms of Use </a>&amp;<!-- --> <a
-                                    class="text-accent" href="/privacy-policy">Privacy Policy</a></p>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
+class MyFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = ` 
         <div class="py-16">
             <div class="flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="76" fill="none"
                     viewBox="0 0 51 76">
@@ -280,9 +202,6 @@
                     <p class="ml-2 uppercase">Whatsapp</p>
                 </a></div>
         </div>
-
-
-
         <footer class="md:pb-20 bg-primary">
             <div
                 class="relative flex justify-between w-9/12 px-8 py-3 mx-auto bg-white rounded-lg started md:w-4/12 md:py-6 bottom-6 md:bottom-9">
@@ -406,7 +325,6 @@
                 </div>
             </div>
         </footer>
-
         <div class="py-3 bg-white">
             <div class="px-4 mx-auto md:w-10/12">
                 <div class="justify-between md:flex">
@@ -503,7 +421,6 @@
                 </div>
             </div>
         </div>
-
         <div class="py-10 bg-secondary-3">
             <div class="w-10/12 mx-auto">
                 <div class="relative "><span class="city-header">CITIES WE SERVE</span></div>
@@ -671,7 +588,6 @@
                 </div>
             </div>
         </div>
-
         <div class="py-5 bg-primary">
             <div class="px-4 mx-auto md:w-10/12">
                 <div class="flex flex-wrap-reverse justify-center md:justify-between">
@@ -683,10 +599,9 @@
                 </div>
             </div>
         </div>
+        
+        `
+    }
+}
 
-        <!-- <script id="__NEXT_DATA__"
-        type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"exrq7-hAmdb0mMUwfirJv","nextExport":true,"autoExport":true,"isFallback":false,"dynamicIds":[3248,6111,5710,6529,9011,6514],"scriptLoader":[]}</script> -->
-
-   
-</body>
-</html>
+customElements.define('my-footer', MyFooter)
