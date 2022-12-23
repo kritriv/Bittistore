@@ -62,7 +62,7 @@ class MyHeader extends HTMLElement {
                                 href="/shop.html">Shop</a>
                             <li class="text-white cursor-pointer pera-6"><span>Personalized Gifts</span></li>
                             <li class="text-white cursor-pointer pera-6"><span>Specials</span></li><a
-                                href="/bulk.html">
+                                href="/bulk-order.html">
                                 <li class="text-white cursor-pointer pera-6">Bulk Order</li>
                             </a>
                             <a href="/blog.html">
